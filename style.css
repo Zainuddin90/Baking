@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+
+    --bg-color: #FFCFAB;
+    --btn-color: #D13B54;
+    --text-color: #804233;
+    --head-font: 3rem;
+    --para-font: 1rem;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 1rem 0;
+}
+
+.nav-content {
+
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: auto;
+}
+
+.logo img {
+
+    width: 200px;
+
+}
+
+nav .checkbox {
+
+    display: none;
+}
+
+nav input {
+
+    display: none;
+}
+
+nav .checkbox i {
+
+    font-size: 2rem;
+    color: var(--btn-color);
+}
+
+ul {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    transition: left 0.3s;
+}
+
+ul li a {
+
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+ul li a:hover{
+
+    color: var(--btn-color);
+    border-top: 2px solid var(--btn-color);
+    border-bottom: 2px solid var(--btn-color);
+}
+
+.herocontainer{
+
+    min-height: 100vh;
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+.content{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.subtitle{
+
+    color: var(--btn-color);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.content h1{
+
+    font-size: var(--head-font);
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 62px;
+    margin-bottom: 15px;
+}
+
+.heart{
+
+    color: var(--btn-color);
+    font-weight: 800;
+}
+
+.para{
+
+    font-size: 1rem;
+    color: rgb(31, 31, 31);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.btn1{
+
+    background-color: var(--btn-color);
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    
+}
+
+.btn2{
+
+    background-color: transparent;
+    color: var(--btn-color);
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 2px solid var(--btn-color);
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    
+}
+
+
+.btn1:hover{
+
+    background-color: #b21832;
+    cursor: pointer;
+}
+
+
+.btn2:hover{
+
+    background-color:var(--btn-color);
+    color: white;
+    cursor: pointer;
+}
+
+.heroimg{
+
+    display: grid;
+    place-items: center;
+}
+
+.chef{
+
+    width: min(25rem, 90%);
+
+}
+
+@media (width < 750px) {
+
+    nav .checkbox {
+
+        display: block;
+    }
+
+    nav{
+
+        background-color: var(--bg-color);
+    }
+
+    ul{
+
+        position: absolute;
+        width: 100%;
+        top: 85px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        background-color: var(--btn-color);
+        color: white;
+        padding: 1.2rem 1.2rem;
+
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+      }
+
+      ul li a{
+
+        font-size: 1.6rem;
+        color: white;
+      }
+
+      .herocontainer{
+
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .heroimg{
+
+        grid-area: 1/1/2/2;
+      }
+      
+      .cta {
+
+        margin: auto;
+      }
+}
+
